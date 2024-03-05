@@ -1,0 +1,10 @@
+table:
+  name: race_chairs
+  schema: public
+object_relationships:
+  - name: yacht_club
+    using:
+      foreign_key_constraint_on: ycId
+  - name: yc_member
+    using:
+      foreign_key_constraint_on: memberId

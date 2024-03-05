@@ -1,0 +1,3 @@
+table:
+  name: race_tickets_purchased
+  schema: public

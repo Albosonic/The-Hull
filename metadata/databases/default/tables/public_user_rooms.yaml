@@ -1,0 +1,7 @@
+table:
+  name: user_rooms
+  schema: public
+object_relationships:
+  - name: yacht_club
+    using:
+      foreign_key_constraint_on: yachtClubId

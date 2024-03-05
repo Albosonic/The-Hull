@@ -1,0 +1,3 @@
+table:
+  name: standard_daily_yc_info
+  schema: public

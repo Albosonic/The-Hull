@@ -1,0 +1,3 @@
+table:
+  name: race_series
+  schema: public

@@ -1,0 +1,7 @@
+table:
+  name: potential_members
+  schema: public
+object_relationships:
+  - name: yachtClubByYachtClub
+    using:
+      foreign_key_constraint_on: yacht_club

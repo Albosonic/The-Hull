@@ -1,0 +1,71 @@
+table:
+  name: yc_members
+  schema: public
+object_relationships:
+  - name: commodore
+    using:
+      foreign_key_constraint_on:
+        column: member_id
+        table:
+          name: commodores
+          schema: public
+  - name: yachtClubByYachtClub
+    using:
+      foreign_key_constraint_on: yacht_club
+array_relationships:
+  - name: commodores
+    using:
+      foreign_key_constraint_on:
+        column: member_id
+        table:
+          name: commodores
+          schema: public
+  - name: messages
+    using:
+      foreign_key_constraint_on:
+        column: authorId
+        table:
+          name: messages
+          schema: public
+  - name: race_tickets_purchaseds
+    using:
+      foreign_key_constraint_on:
+        column: memberId
+        table:
+          name: race_tickets_purchased
+          schema: public
+  - name: reciprocal_requests
+    using:
+      foreign_key_constraint_on:
+        column: memberId
+        table:
+          name: reciprocal_request
+          schema: public
+  - name: signed_race_releases
+    using:
+      foreign_key_constraint_on:
+        column: memberId
+        table:
+          name: signed_race_release
+          schema: public
+  - name: vessels
+    using:
+      foreign_key_constraint_on:
+        column: ownerId
+        table:
+          name: vessels
+          schema: public
+  - name: yc_event_dinner_tickets
+    using:
+      foreign_key_constraint_on:
+        column: memberId
+        table:
+          name: yc_event_dinner_tickets
+          schema: public
+  - name: yc_event_purchased_tickets
+    using:
+      foreign_key_constraint_on:
+        column: memberId
+        table:
+          name: yc_event_purchased_tickets
+          schema: public

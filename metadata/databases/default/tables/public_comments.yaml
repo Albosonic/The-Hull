@@ -1,0 +1,7 @@
+table:
+  name: comments
+  schema: public
+object_relationships:
+  - name: yc_member
+    using:
+      foreign_key_constraint_on: memberId

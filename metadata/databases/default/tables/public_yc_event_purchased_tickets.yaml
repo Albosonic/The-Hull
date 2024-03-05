@@ -1,0 +1,13 @@
+table:
+  name: yc_event_purchased_tickets
+  schema: public
+object_relationships:
+  - name: yc_event
+    using:
+      foreign_key_constraint_on: eventId
+  - name: yc_event_tickets_for_purchase
+    using:
+      foreign_key_constraint_on: ticketForPurchaseId
+  - name: yc_member
+    using:
+      foreign_key_constraint_on: memberId

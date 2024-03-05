@@ -1,0 +1,3 @@
+table:
+  name: yc_secondary_members
+  schema: public

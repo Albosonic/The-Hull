@@ -1,0 +1,18 @@
+table:
+  name: race_release_forms
+  schema: public
+array_relationships:
+  - name: races
+    using:
+      foreign_key_constraint_on:
+        column: releaseFormId
+        table:
+          name: races
+          schema: public
+  - name: signed_race_releases
+    using:
+      foreign_key_constraint_on:
+        column: releaseFormId
+        table:
+          name: signed_race_release
+          schema: public

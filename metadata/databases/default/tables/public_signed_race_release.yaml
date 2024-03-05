@@ -1,0 +1,7 @@
+table:
+  name: signed_race_release
+  schema: public
+object_relationships:
+  - name: race_release_form
+    using:
+      foreign_key_constraint_on: releaseFormId

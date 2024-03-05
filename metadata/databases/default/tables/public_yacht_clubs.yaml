@@ -1,0 +1,64 @@
+table:
+  name: yacht_clubs
+  schema: public
+object_relationships:
+  - name: commodore
+    using:
+      foreign_key_constraint_on:
+        column: yacht_club
+        table:
+          name: commodores
+          schema: public
+  - name: regionByRegion
+    using:
+      foreign_key_constraint_on: region
+array_relationships:
+  - name: commodores
+    using:
+      foreign_key_constraint_on:
+        column: yacht_club
+        table:
+          name: commodores
+          schema: public
+  - name: race_chairs
+    using:
+      foreign_key_constraint_on:
+        column: ycId
+        table:
+          name: race_chairs
+          schema: public
+  - name: reciprocalRequestsByHomeycid
+    using:
+      foreign_key_constraint_on:
+        column: homeYCId
+        table:
+          name: reciprocal_request
+          schema: public
+  - name: reciprocal_requests
+    using:
+      foreign_key_constraint_on:
+        column: visitingYCId
+        table:
+          name: reciprocal_request
+          schema: public
+  - name: user_rooms
+    using:
+      foreign_key_constraint_on:
+        column: yachtClubId
+        table:
+          name: user_rooms
+          schema: public
+  - name: yc_event_tickets_for_purchases
+    using:
+      foreign_key_constraint_on:
+        column: ycId
+        table:
+          name: yc_event_tickets_for_purchase
+          schema: public
+  - name: yc_members
+    using:
+      foreign_key_constraint_on:
+        column: yacht_club
+        table:
+          name: yc_members
+          schema: public

@@ -1,0 +1,26 @@
+table:
+  name: races
+  schema: public
+object_relationships:
+  - name: race_course
+    using:
+      foreign_key_constraint_on: raceCourseId
+  - name: race_release_form
+    using:
+      foreign_key_constraint_on: releaseFormId
+  - name: race_series
+    using:
+      foreign_key_constraint_on: seriesId
+  - name: race_tickets_for_purchase
+    using:
+      foreign_key_constraint_on:
+        column: raceId
+        table:
+          name: race_tickets_for_purchase
+          schema: public
+  - name: yacht_club
+    using:
+      foreign_key_constraint_on: ycId
+  - name: yc_event
+    using:
+      foreign_key_constraint_on: eventId

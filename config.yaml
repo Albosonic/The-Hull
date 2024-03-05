@@ -1,0 +1,7 @@
+version: 3
+endpoint: https://native-puma-79.hasura.app/
+admin_secret: CCZX4iiKN1DvpFG3lk0AO8saVa986B4JYfRUJS7mqVoHob7SdDkE3r9JcczdWsuW
+metadata_directory: metadata
+actions:
+  kind: synchronous
+  handler_webhook_baseurl: http://localhost:3000

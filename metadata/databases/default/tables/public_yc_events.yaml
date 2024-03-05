@@ -1,0 +1,19 @@
+table:
+  name: yc_events
+  schema: public
+object_relationships:
+  - name: yc_event_tickets_for_purchase
+    using:
+      foreign_key_constraint_on:
+        column: eventId
+        table:
+          name: yc_event_tickets_for_purchase
+          schema: public
+array_relationships:
+  - name: comments
+    using:
+      foreign_key_constraint_on:
+        column: eventId
+        table:
+          name: comments
+          schema: public

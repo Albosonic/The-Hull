@@ -1,0 +1,19 @@
+table:
+  name: regions
+  schema: public
+object_relationships:
+  - name: yacht_club
+    using:
+      foreign_key_constraint_on:
+        column: region
+        table:
+          name: yacht_clubs
+          schema: public
+array_relationships:
+  - name: yacht_clubs
+    using:
+      foreign_key_constraint_on:
+        column: region
+        table:
+          name: yacht_clubs
+          schema: public

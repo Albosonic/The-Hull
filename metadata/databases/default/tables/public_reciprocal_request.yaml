@@ -1,0 +1,13 @@
+table:
+  name: reciprocal_request
+  schema: public
+object_relationships:
+  - name: yachtClubByHomeycid
+    using:
+      foreign_key_constraint_on: homeYCId
+  - name: yacht_club
+    using:
+      foreign_key_constraint_on: visitingYCId
+  - name: yc_member
+    using:
+      foreign_key_constraint_on: memberId

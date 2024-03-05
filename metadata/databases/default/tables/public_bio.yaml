@@ -1,0 +1,3 @@
+table:
+  name: bio
+  schema: public
